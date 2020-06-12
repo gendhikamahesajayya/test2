@@ -1,0 +1,24 @@
+<ActionBar [title]="'Dota 2 Heroes  ( ' + name +' )'"></ActionBar>
+
+<GridLayout *ngIf="hero" rows="auto, auto, *" columns="*, *" class="p-10">
+  <Label class="h2" text="Information" row="0" colSpan="*"></Label>
+  <GridLayout
+    row="2"
+    col="0"
+    colSpan="2"
+    rows="auto, auto, auto, auto, auto, auto, auto"
+    columns="auto, *"
+  >
+  <Label text=" Hero Name   : " class="font-weight-bold" row="0" col="0"></Label>
+  <Label [text]="hero.name" class="text-uppercase" row="0" col="1"></Label>
+  <Label text="Call Name Hero                  : " class="font-weight-bold" row="1" col="0"></Label>
+  <Label [text]="hero.localized_name"  row="1" col="1"></Label>
+  <Label text="Primary Attribute Hero     : " class="font-weight-bold" row="2" col="0"></Label>
+  <Label [text]="hero.primary_attr"  row="2" col="1"></Label>
+  <Label text="Attack Type Hero                 : " class="font-weight-bold" row="3" col="0"></Label>
+  <Label [text]="hero.attack_type + ' (People)'"  row="3" col="1"></Label>
+  <Label text="Hero Legs     : " class="font-weight-bold" row="4" col="0"></Label>
+  <Label [text]="hero.legs + ' (People)'"  row="4" col="1"></Label>
+  
+  </GridLayout>
+</GridLayout>

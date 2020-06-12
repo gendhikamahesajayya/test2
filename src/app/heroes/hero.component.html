@@ -1,0 +1,11 @@
+<ActionBar title="Dota 2 Heroes List"> </ActionBar>
+<ListView [items]="$heroes | async" (loadMoreItems)="loadMore()">
+  <ng-template let-hero="item">
+    <StackLayout>
+      <Label
+        [nsRouterLink]="['/hero',hero.name]"
+        [text]="hero.name"
+      ></Label>
+    </StackLayout>
+  </ng-template>
+</ListView>
